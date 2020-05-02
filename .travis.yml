@@ -1,4 +1,13 @@
+language: python
+python: 3.6
+branches: master
+install:
+    - pip install mkdocs-material
+script:
+    - mkdocs build --verbose --clean --strict
 deploy:
   provider: firebase
+  skin_cleanup: true
+  local_dir: site
   token:
     secure: Xyn25BqjZQUv35jvPQWH4HAC+BAUOc0f007HcG/VUaGJgV+IX/4NRI8i6Yi/7GNg7R0229wtOJmqjsScr3he7nFrSHKc9hpu3in9DJkB0ZlrAqcXUk564Ocu+8YVKf3zvsUpqLg/A+NcUzk7FG4l9YwDbQin345XQg6yeLYhKHnu5LD/4QZIJsmNPv5e0vBoVe405hzsR5nykIPw/p7S+MWEJBNL40KhvLJqlwfgPJkp+o6FLqtLohgkAsA6lgHhcApoDEd1upxoR4YDxZkhhQ+wYplFwebTZ++3ywgceCBXXycevc83qfGRcdKOA9KclLCItowmLzm9yJGOIzcLxNRJ7WEp4g0JTL2z6m+6V1oa61THgxzI+5Z75GRONMnLg+CPRAEusmN06Wb5rnPH60AVIVSP6PrrNbgCXDNENh21ywFCc3akvFBRkldHMJL5Lq3vJ1EJA7qPsk/Qlai9+D+GFDv+rDNVSLHx48b5aD53K+bIR/NkQXs4rlnw+fiJjPs0WdieTg5tWUwakpBJbIcR17sHGeLfd24PXPySTJoJlebLHwqN6Gyc9MnbJCPyww1ux6jj8JGhJvG78zihQ/mkkJ18H48PT5/kzRYkgTaHsg1Pj+zLBrAfg8e/R+6pIsQTPzd3+9SrvlskrP7836E4d7QlViPLBSbwMLMjnd0=
